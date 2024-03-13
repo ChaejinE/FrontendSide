@@ -1,9 +1,9 @@
-import Ready from "./ready/app";
+import Reuqest from "./components/PDFUpload";
 
 function App() {
   return (
     <div className="App">
-      <Ready/>
+      <Reuqest/>
     </div>
   );
 }
