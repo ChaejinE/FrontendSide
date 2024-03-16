@@ -1,10 +1,13 @@
-import Reuqest from "./components/PDFUpload";
+import { Routes, Route } from "react-router-dom";
+import Request from "./pages/Request";
+import Response from "./pages/Response";
 
 function App() {
   return (
-    <div className="App">
-      <Reuqest/>
-    </div>
+    <Routes>
+      <Route path='/' element={<Request />} />
+      <Route path='/summary' element={<Response />} />
+    </Routes>
   );
 }
 

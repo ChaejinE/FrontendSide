@@ -4,5 +4,5 @@
 # Docker run
 ```bash
 NODE_VERSION=20.11.1
-docker run --name thesis_summary -it --rm -d -v .:/usr/src/app -p 3000:3000 node:${NODE_VERSION}
+docker run --name thesis_summary_frontend -it --rm -d --net host -v .:/usr/src/app node:${NODE_VERSION}
 ```
