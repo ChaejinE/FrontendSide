@@ -1,13 +1,18 @@
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function Response() {
-    const location = useLocation();
-    const summary = location.state.summary;
+function Response({ uploadPath, summary }) {
+    const navigate = useNavigate();
+
+    const backButtonCallback = async () => {
+        navigate(uploadPath, { state : { sumamry: summary } });
+    }
 
     return (
         <div>
             <p>{summary}</p>
+            <div>
+                <button onClick={backButtonCallback}>Back</button>
+            </div>
         </div>
     )
 }
