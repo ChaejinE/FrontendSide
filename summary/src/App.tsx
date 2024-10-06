@@ -1,17 +1,22 @@
-import Request from "../pages/home"
+import Home from "../pages/home"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import styled from "styled-components";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Request/>
+    element: <Home/>
   }
 ]);
+
+const Wrapper = styled.div``;
 
 function App() {
   return (
   <>
-    <RouterProvider router={router} />
+    <Wrapper>
+      <RouterProvider router={router} />
+    </Wrapper>
   </>
   )
 }

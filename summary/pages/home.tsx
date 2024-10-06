@@ -1,8 +1,14 @@
+import styled from "styled-components";
+import Summary from "../components/summary";
+import Title from "../components/title";
+
+const Wrapper = styled.div``;
 function Home() {
     return (
-        <div>
-            <h1>HOME</h1>
-        </div>
+        <Wrapper>
+            <Title/>
+            <Summary/>
+        </Wrapper>
     )
 }
 
